@@ -1,26 +1,245 @@
 @import "tailwindcss";
 
+/* ─── Design Tokens ─── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-base: #0a0a0f;
+  --bg-elevated: #12121a;
+  --bg-card: #1a1a28;
+  --cyan: #00f5ff;
+  --cyan-dim: #00f5ff66;
+  --red: #ff3366;
+  --red-dim: #ff336666;
+  --text-primary: #e8e8e8;
+  --text-secondary: #8a8a9a;
+  --text-muted: #5a5a6a;
+  --grain-opacity: 0.035;
+  --glow-sm: 0 0 10px var(--cyan-dim);
+  --glow-md: 0 0 20px var(--cyan-dim);
+  --glow-lg: 0 0 40px var(--cyan-dim);
+  --glow-red: 0 0 20px var(--red-dim);
+  --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* ─── Tailwind v4 theme tokens ─── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--bg-base);
+  --color-foreground: var(--text-primary);
+  --color-cyan: var(--cyan);
+  --color-cyan-dim: var(--cyan-dim);
+  --color-red: var(--red);
+  --color-red-dim: var(--red-dim);
+  --color-elevated: var(--bg-elevated);
+  --color-card: var(--bg-card);
+  --color-secondary: var(--text-secondary);
+  --color-muted: var(--text-muted);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─── Reset & Base ─── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: "DM Mono", "Geist Mono", monospace;
+  line-height: 1.7;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--cyan-dim);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan);
+}
+
+/* ─── Film Grain Overlay ─── */
+.film-grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: var(--grain-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 128px 128px;
+}
+
+/* ─── Custom Cursor ─── */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--cyan);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999;
+  transition: transform 0.15s var(--transition-smooth),
+    background 0.15s var(--transition-smooth);
+  box-shadow: var(--glow-sm);
+  transform: translate(-50%, -50%);
+}
+
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--cyan-dim);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99998;
+  transition: width 0.3s var(--transition-smooth),
+    height 0.3s var(--transition-smooth),
+    border-color 0.3s var(--transition-smooth),
+    transform 0.08s linear;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-hover .cursor-dot {
+  transform: translate(-50%, -50%) scale(2.5);
+  background: var(--red);
+  box-shadow: var(--glow-red);
+}
+
+.cursor-hover .cursor-ring {
+  width: 52px;
+  height: 52px;
+  border-color: var(--red-dim);
+}
+
+/* ─── Section Utility ─── */
+.chapter {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem;
+  overflow: hidden;
+}
+
+.chapter-title {
+  font-family: "Clash Display", "Bebas Neue", sans-serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  background: linear-gradient(135deg, var(--cyan) 0%, var(--red) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.chapter-label {
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+
+/* ─── Glow Card ─── */
+.glow-card {
+  background: var(--bg-card);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.glow-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--cyan-dim) 0%, transparent 50%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.glow-card:hover {
+  border-color: var(--cyan-dim);
+  box-shadow: var(--glow-sm);
+  transform: translateY(-2px);
+}
+
+/* ─── Glassmorphism ─── */
+.glass {
+  background: rgba(18, 18, 26, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 245, 255, 0.1);
+}
+
+/* ─── Typography ─── */
+.heading-display {
+  font-family: "Clash Display", "Bebas Neue", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.text-glow {
+  text-shadow: 0 0 20px var(--cyan-dim);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+  .chapter {
+    padding: 3rem 1rem;
+  }
+}
+
+/* ─── Selection ─── */
+::selection {
+  background: var(--cyan);
+  color: var(--bg-base);
+}
+
+/* ─── Progress Bar ─── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cyan), var(--red));
+  z-index: 99990;
+  transform-origin: left;
 }
