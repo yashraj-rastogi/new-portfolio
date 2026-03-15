@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sketchbook Portfolio — Reference Illustrations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Caveat:wght@400;600;700&family=Kalam:wght@300;400;700&family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #2a2420;
+      font-family: 'Caveat', cursive;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+    h1 {
+      font-family: 'Permanent Marker', cursive;
+      color: #f4f0e8;
+      font-size: 1.8rem;
+      text-align: center;
+      opacity: 0.7;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      font-family: 'Caveat', cursive;
+      color: #9e9488;
+      font-size: 1rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .label {
+      font-family: 'Caveat', cursive;
+      color: #9e9488;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    svg { display: block; }
+    .row {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>✏️ Sketchbook Portfolio</h1>
+  <p class="subtitle">Reference Illustrations for Figma Make Prompt</p>
+
+  <!-- ═══════════════════════════════════════
+       1. HERO SECTION
+  ═══════════════════════════════════════ -->
+  <div class="card">
+    <p class="label">// Section 1 — Hero</p>
+    <svg width="900" height="520" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="paper1">
+          <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+          <feColorMatrix type="saturate" values="0"/>
+          <feBlend in="SourceGraphic" mode="multiply" result="blend"/>
+          <feComposite in="blend" in2="SourceGraphic" operator="in"/>
+        </filter>
+      </defs>
+
+      <!-- Paper background -->
+      <rect width="900" height="520" fill="#f4f0e8"/>
+      <!-- Grain -->
+      <rect width="900" height="520" fill="url(#noise1)" opacity="0.06"/>
+      <!-- Ruled lines -->
+      <g stroke="#c8b89a" stroke-width="0.6" opacity="0.3">
+        <line x1="0" y1="32" x2="900" y2="32"/>
+        <line x1="0" y1="64" x2="900" y2="64"/>
+        <line x1="0" y1="96" x2="900" y2="96"/>
+        <line x1="0" y1="128" x2="900" y2="128"/>
+        <line x1="0" y1="160" x2="900" y2="160"/>
+        <line x1="0" y1="192" x2="900" y2="192"/>
+        <line x1="0" y1="224" x2="900" y2="224"/>
+        <line x1="0" y1="256" x2="900" y2="256"/>
+        <line x1="0" y1="288" x2="900" y2="288"/>
+        <line x1="0" y1="320" x2="900" y2="320"/>
+        <line x1="0" y1="352" x2="900" y2="352"/>
+        <line x1="0" y1="384" x2="900" y2="384"/>
+        <line x1="0" y1="416" x2="900" y2="416"/>
+        <line x1="0" y1="448" x2="900" y2="448"/>
+        <line x1="0" y1="480" x2="900" y2="480"/>
+        <line x1="0" y1="512" x2="900" y2="512"/>
+      </g>
+      <!-- Red margin line -->
+      <line x1="72" y1="0" x2="72" y2="520" stroke="#cc6666" stroke-width="1.2" opacity="0.35"/>
+
+      <!-- Chapter label -->
+      <text x="90" y="38" font-family="Caveat" font-size="13" fill="#9e9488" letter-spacing="2">// pg.01 — the opening sketch</text>
+
+      <!-- Subtitle -->
+      <text x="90" y="75" font-family="Special Elite" font-size="15" fill="#6b6258">Full Stack Developer &amp; AI Enthusiast</text>
+
+      <!-- Giant Name -->
+      <g transform="rotate(-1, 90, 100)">
+        <text x="88" y="160" font-family="Permanent Marker" font-size="88" fill="#1a1612" letter-spacing="-1">Yashraj</text>
+        <!-- scribbled underline under first word -->
+        <path d="M88,168 Q200,163 310,170 Q420,175 530,167" stroke="#1a1612" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+        <text x="88" y="245" font-family="Permanent Marker" font-size="88" fill="#1a1612" letter-spacing="-1">Rastogi</text>
+        <path d="M88,253 Q210,247 330,255 Q450,261 570,252" stroke="#1a1612" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+      </g>
+
+      <!-- Quote block -->
+      <g transform="translate(90, 270)">
+        <!-- Left border accent -->
+        <rect x="0" y="0" width="3" height="90" fill="#4a4238" rx="1"/>
+        <rect x="0" y="0" width="340" height="90" fill="#4a4238" opacity="0.04"/>
+        <!-- Making Good Stuff -->
+        <text x="18" y="30" font-family="Caveat" font-size="26" font-weight="700" fill="#2e2820">Making Good Stuff</text>
+        <!-- Hiding Bad Stuff + strikethrough -->
+        <text x="18" y="68" font-family="Caveat" font-size="20" fill="#6b6258">Hiding Bad Stuff</text>
+        <line x1="14" y1="62" x2="218" y2="59" stroke="#4a4238" stroke-width="2" stroke-linecap="round"/>
+        <!-- pencil emoji -->
+        <text x="-10" y="-8" font-size="14">✏️</text>
+      </g>
+
+      <!-- Bio text -->
+      <text x="90" y="390" font-family="Kalam" font-size="14" fill="#6b6258">A 2nd year B.Tech undergrad at SRMCEM who loves creating</text>
+      <text x="90" y="410" font-family="Kalam" font-size="14" fill="#6b6258">and building stuff and likes to learn new things.</text>
+
+      <!-- CTA Button (dashed border) -->
+      <g transform="translate(90, 432)">
+        <rect x="0" y="0" width="165" height="42" fill="none" stroke="#1a1612" stroke-width="2" stroke-dasharray="7,3" rx="2"/>
+        <text x="82" y="27" font-family="Caveat" font-size="18" font-weight="700" fill="#1a1612" text-anchor="middle">Turn the Page →</text>
+      </g>
+
+      <!-- Doodles -->
+      <text x="640" y="120" font-family="Permanent Marker" font-size="48" fill="#1a1612" opacity="0.04" transform="rotate(15,640,120)">{ }</text>
+      <text x="740" y="200" font-size="36" fill="#1a1612" opacity="0.05" transform="rotate(-8,740,200)">✦</text>
+      <text x="800" y="350" font-family="Caveat" font-size="22" fill="#1a1612" opacity="0.05">~~~~~</text>
+      <text x="700" y="420" font-family="Permanent Marker" font-size="28" fill="#1a1612" opacity="0.04" transform="rotate(5,700,420)">&lt;/&gt;</text>
+
+      <!-- Scroll hint -->
+      <text x="450" y="493" font-family="Caveat" font-size="12" fill="#9e9488" text-anchor="middle">scroll down</text>
+      <path d="M450,498 L450,510 M445,506 L450,512 L455,506" stroke="#9e9488" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       2. ABOUT / TIMELINE
+  ═══════════════════════════════════════ -->
+  <div class="row">
+    <div class="card">
+      <p class="label">// Section 2 — About + Timeline</p>
+      <svg width="900" height="480" viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg">
+        <rect width="900" height="480" fill="#ede8dc"/>
+        <!-- ruled lines -->
+        <g stroke="#c0b090" stroke-width="0.5" opacity="0.25">
+          <line x1="0" y1="32" x2="900" y2="32"/><line x1="0" y1="64" x2="900" y2="64"/>
+          <line x1="0" y1="96" x2="900" y2="96"/><line x1="0" y1="128" x2="900" y2="128"/>
+          <line x1="0" y1="160" x2="900" y2="160"/><line x1="0" y1="192" x2="900" y2="192"/>
+          <line x1="0" y1="224" x2="900" y2="224"/><line x1="0" y1="256" x2="900" y2="256"/>
+          <line x1="0" y1="288" x2="900" y2="288"/><line x1="0" y1="320" x2="900" y2="320"/>
+          <line x1="0" y1="352" x2="900" y2="352"/><line x1="0" y1="384" x2="900" y2="384"/>
+          <line x1="0" y1="416" x2="900" y2="416"/><line x1="0" y1="448" x2="900" y2="448"/>
+        </g>
+        <line x1="72" y1="0" x2="72" y2="480" stroke="#cc6666" stroke-width="1.2" opacity="0.3"/>
+
+        <!-- Section label -->
+        <text x="90" y="36" font-family="Caveat" font-size="12" fill="#9e9488" letter-spacing="2">// pg.02 — origin story</text>
+        <!-- Heading -->
+        <g transform="rotate(-0.8, 90, 50)">
+          <text x="90" y="78" font-family="Permanent Marker" font-size="42" fill="#1a1612">From Scared to</text>
+          <text x="90" y="122" font-family="Permanent Marker" font-size="42" fill="#1a1612">National Stage</text>
+        </g>
+
+        <!-- LEFT: bio -->
+        <text x="90" y="162" font-family="Kalam" font-size="13" fill="#4a4238">A 2nd year B.Tech undergrad at SRMCEM.</text>
+        <text x="90" y="182" font-family="Kalam" font-size="13" fill="#4a4238">Chased code obsessively. Built things that</text>
+        <text x="90" y="202" font-family="Kalam" font-size="13" fill="#4a4238">didn't exist. Opened codebases at 2 AM.</text>
+
+        <!-- callout box -->
+        <rect x="90" y="218" width="320" height="50" fill="#4a4238" opacity="0.05"/>
+        <rect x="90" y="218" width="3" height="50" fill="#4a4238" rx="1"/>
+        <text x="105" y="240" font-family="Caveat" font-size="15" fill="#2e2820">→ I just love building stuff.</text>
+        <text x="105" y="258" font-family="Caveat" font-size="13" fill="#6b6258">That's it. That's the whole motivation.</text>
+
+        <!-- RIGHT: Timeline -->
+        <!-- Vertical dashed connector -->
+        <line x1="495" y1="155" x2="495" y2="455" stroke="#c4bdb2" stroke-width="1" stroke-dasharray="4,5"/>
+
+        <!-- TL items -->
+        <!-- item 1 -->
+        <circle cx="495" cy="168" r="13" fill="#f4f0e8" stroke="#4a4238" stroke-width="2"/>
+        <text x="495" y="174" font-family="Caveat" font-size="12" fill="#4a4238" text-anchor="middle" font-weight="700">1</text>
+        <text x="520" y="162" font-family="Caveat" font-size="10" fill="#9e9488" letter-spacing="1">// chapter one</text>
+        <text x="520" y="178" font-family="Kalam" font-size="12" fill="#4a4238">Opened a large codebase. Understood</text>
+        <text x="520" y="193" font-family="Kalam" font-size="12" fill="#4a4238">nothing. Opened it again anyway.</text>
+
+        <!-- item 2 -->
+        <circle cx="495" cy="225" r="13" fill="#f4f0e8" stroke="#4a4238" stroke-width="2"/>
+        <text x="495" y="231" font-family="Caveat" font-size="12" fill="#4a4238" text-anchor="middle" font-weight="700">2</text>
+        <text x="520" y="220" font-family="Caveat" font-size="10" fill="#9e9488" letter-spacing="1">// chapter two</text>
+        <text x="520" y="236" font-family="Kalam" font-size="12" fill="#4a4238">Became Technical Coordinator.</text>
+        <text x="520" y="251" font-family="Kalam" font-size="12" fill="#4a4238">Organized events, workshops, hackathons.</text>
+
+        <!-- item 3 -->
+        <circle cx="495" cy="282" r="13" fill="#f4f0e8" stroke="#4a4238" stroke-width="2"/>
+        <text x="495" y="288" font-family="Caveat" font-size="12" fill="#4a4238" text-anchor="middle" font-weight="700">3</text>
+        <text x="520" y="277" font-family="Caveat" font-size="10" fill="#9e9488" letter-spacing="1">// chapter three</text>
+        <text x="520" y="293" font-family="Kalam" font-size="12" fill="#4a4238">Reached finals of multiple college-level</text>
+        <text x="520" y="308" font-family="Kalam" font-size="12" fill="#4a4238">hackathons and competitions.</text>
+
+        <!-- item 4 STAR — highlighted -->
+        <circle cx="495" cy="342" r="15" fill="#1a1612" stroke="#1a1612" stroke-width="2"/>
+        <text x="495" y="348" font-family="Caveat" font-size="13" fill="#f4f0e8" text-anchor="middle" font-weight="700">★</text>
+        <text x="520" y="335" font-family="Caveat" font-size="10" fill="#9e9488" letter-spacing="1">// chapter four — national stage</text>
+        <text x="520" y="351" font-family="Kalam" font-size="12" fill="#1a1612" font-weight="700">National Finalist — India AI Impact</text>
+        <text x="520" y="366" font-family="Kalam" font-size="12" fill="#1a1612" font-weight="700">Summit Buildathon by HCL GUVI.</text>
+
+        <!-- item 5 -->
+        <circle cx="495" cy="408" r="13" fill="#f4f0e8" stroke="#c4bdb2" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <text x="495" y="414" font-family="Caveat" font-size="13" fill="#9e9488" text-anchor="middle">…</text>
+        <text x="520" y="404" font-family="Caveat" font-size="10" fill="#9e9488" letter-spacing="1">// to be continued</text>
+        <text x="520" y="420" font-family="Kalam" font-size="12" fill="#9e9488" font-style="italic">And the story isn't over.</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       3. SKILL CARD DETAIL
+  ═══════════════════════════════════════ -->
+  <div class="row">
+    <div class="card">
+      <p class="label">// Skill Card — Folded Corner + Hatched Bars</p>
+      <svg width="280" height="240" viewBox="0 0 280 240" xmlns="http://www.w3.org/2000/svg">
+        <!-- Card bg, slightly rotated -->
+        <g transform="rotate(-0.4, 140, 120)">
+          <rect x="4" y="4" width="268" height="228" fill="#c4bdb2" opacity="0.4" rx="1"/>
+          <rect x="0" y="0" width="268" height="228" fill="#ede8dc" rx="1"/>
+          <rect x="0" y="0" width="268" height="228" fill="none" stroke="#4a4238" stroke-width="2" rx="1"/>
+          <!-- Folded corner -->
+          <polygon points="246,0 268,0 268,22" fill="#f4f0e8"/>
+          <line x1="246" y1="0" x2="268" y2="22" stroke="#c4bdb2" stroke-width="1.5"/>
+
+          <!-- Category label -->
+          <text x="18" y="28" font-family="Caveat" font-size="11" fill="#9e9488" letter-spacing="2">// FRONTEND</text>
+          <line x1="18" y1="34" x2="250" y2="34" stroke="#e0d8cc" stroke-width="1"/>
+
+          <!-- Skill rows with hatched bars -->
+          <!-- React -->
+          <text x="18" y="62" font-family="Kalam" font-size="14" fill="#2e2820">React.js</text>
+          <text x="230" y="62" font-family="Caveat" font-size="11" fill="#9e9488" text-anchor="end">Advanced</text>
+          <!-- bar track -->
+          <line x1="18" y1="72" x2="252" y2="72" stroke="#e0d8cc" stroke-width="1.5"/>
+          <!-- hatched fill 85% -->
+          <g clip-path="url(#bar1)">
+            <g fill="#4a4238">
+              <rect x="18" y="66" width="5" height="6"/><rect x="27" y="66" width="5" height="6"/>
+              <rect x="36" y="66" width="5" height="6"/><rect x="45" y="66" width="5" height="6"/>
+              <rect x="54" y="66" width="5" height="6"/><rect x="63" y="66" width="5" height="6"/>
+              <rect x="72" y="66" width="5" height="6"/><rect x="81" y="66" width="5" height="6"/>
+              <rect x="90" y="66" width="5" height="6"/><rect x="99" y="66" width="5" height="6"/>
+              <rect x="108" y="66" width="5" height="6"/><rect x="117" y="66" width="5" height="6"/>
+              <rect x="126" y="66" width="5" height="6"/><rect x="135" y="66" width="5" height="6"/>
+              <rect x="144" y="66" width="5" height="6"/><rect x="153" y="66" width="5" height="6"/>
+              <rect x="162" y="66" width="5" height="6"/><rect x="171" y="66" width="5" height="6"/>
+              <rect x="180" y="66" width="5" height="6"/><rect x="189" y="66" width="5" height="6"/>
+              <rect x="198" y="66" width="5" height="6"/><rect x="207" y="66" width="5" height="6"/>
+              <rect x="216" y="66" width="5" height="6"/>
+            </g>
+          </g>
+          <!-- tip marker -->
+          <rect x="222" y="63" width="3" height="10" fill="#1a1612" rx="1"/>
+
+          <!-- Next.js -->
+          <text x="18" y="104" font-family="Kalam" font-size="14" fill="#2e2820">Next.js</text>
+          <text x="230" y="104" font-family="Caveat" font-size="11" fill="#9e9488" text-anchor="end">Advanced</text>
+          <line x1="18" y1="114" x2="252" y2="114" stroke="#e0d8cc" stroke-width="1.5"/>
+          <g fill="#4a4238">
+            <rect x="18" y="108" width="5" height="6"/><rect x="27" y="108" width="5" height="6"/>
+            <rect x="36" y="108" width="5" height="6"/><rect x="45" y="108" width="5" height="6"/>
+            <rect x="54" y="108" width="5" height="6"/><rect x="63" y="108" width="5" height="6"/>
+            <rect x="72" y="108" width="5" height="6"/><rect x="81" y="108" width="5" height="6"/>
+            <rect x="90" y="108" width="5" height="6"/><rect x="99" y="108" width="5" height="6"/>
+            <rect x="108" y="108" width="5" height="6"/><rect x="117" y="108" width="5" height="6"/>
+            <rect x="126" y="108" width="5" height="6"/><rect x="135" y="108" width="5" height="6"/>
+            <rect x="144" y="108" width="5" height="6"/><rect x="153" y="108" width="5" height="6"/>
+            <rect x="162" y="108" width="5" height="6"/><rect x="171" y="108" width="5" height="6"/>
+            <rect x="180" y="108" width="5" height="6"/><rect x="189" y="108" width="5" height="6"/>
+            <rect x="198" y="108" width="5" height="6"/><rect x="207" y="108" width="5" height="6"/>
+          </g>
+          <rect x="213" y="105" width="3" height="10" fill="#1a1612" rx="1"/>
+
+          <!-- HTML/CSS -->
+          <text x="18" y="146" font-family="Kalam" font-size="14" fill="#2e2820">HTML / CSS</text>
+          <text x="230" y="146" font-family="Caveat" font-size="11" fill="#9e9488" text-anchor="end">Advanced</text>
+          <line x1="18" y1="156" x2="252" y2="156" stroke="#e0d8cc" stroke-width="1.5"/>
+          <g fill="#4a4238">
+            <rect x="18" y="150" width="5" height="6"/><rect x="27" y="150" width="5" height="6"/>
+            <rect x="36" y="150" width="5" height="6"/><rect x="45" y="150" width="5" height="6"/>
+            <rect x="54" y="150" width="5" height="6"/><rect x="63" y="150" width="5" height="6"/>
+            <rect x="72" y="150" width="5" height="6"/><rect x="81" y="150" width="5" height="6"/>
+            <rect x="90" y="150" width="5" height="6"/><rect x="99" y="150" width="5" height="6"/>
+            <rect x="108" y="150" width="5" height="6"/><rect x="117" y="150" width="5" height="6"/>
+            <rect x="126" y="150" width="5" height="6"/><rect x="135" y="150" width="5" height="6"/>
+            <rect x="144" y="150" width="5" height="6"/><rect x="153" y="150" width="5" height="6"/>
+            <rect x="162" y="150" width="5" height="6"/><rect x="171" y="150" width="5" height="6"/>
+            <rect x="180" y="150" width="5" height="6"/><rect x="189" y="150" width="5" height="6"/>
+            <rect x="198" y="150" width="5" height="6"/><rect x="207" y="150" width="5" height="6"/>
+            <rect x="216" y="150" width="5" height="6"/><rect x="225" y="150" width="5" height="6"/>
+          </g>
+          <rect x="232" y="147" width="3" height="10" fill="#1a1612" rx="1"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- ═══ PROJECT CARD ═══ -->
+    <div class="card">
+      <p class="label">// Project Card — Pushpin Style</p>
+      <svg width="260" height="280" viewBox="0 0 260 280" xmlns="http://www.w3.org/2000/svg">
+        <g transform="rotate(-0.7, 130, 140)">
+          <!-- shadow -->
+          <rect x="5" y="18" width="248" height="256" fill="#c4bdb2" opacity="0.4" rx="1"/>
+          <!-- card -->
+          <rect x="0" y="14" width="248" height="256" fill="#f4f0e8" stroke="#4a4238" stroke-width="2" rx="1"/>
+          <!-- pushpin -->
+          <circle cx="124" cy="8" r="9" fill="#6b6258" stroke="#4a4238" stroke-width="1.5"/>
+          <circle cx="124" cy="8" r="4" fill="#4a4238"/>
+          <line x1="124" y1="16" x2="124" y2="28" stroke="#4a4238" stroke-width="2"/>
+
+          <!-- mission num -->
+          <text x="18" y="50" font-family="Caveat" font-size="11" fill="#9e9488" letter-spacing="2">// MISSION_01</text>
+
+          <!-- proj name -->
+          <text x="18" y="82" font-family="Permanent Marker" font-size="26" fill="#1a1612">Project Alpha</text>
+
+          <!-- description lines -->
+          <text x="18" y="112" font-family="Kalam" font-size="12" fill="#6b6258">A full-stack platform that solved</text>
+          <text x="18" y="130" font-family="Kalam" font-size="12" fill="#6b6258">a real problem. Kept me up at</text>
+          <text x="18" y="148" font-family="Kalam" font-size="12" fill="#6b6258">3 AM and still does.</text>
+
+          <!-- divider -->
+          <line x1="18" y1="164" x2="230" y2="164" stroke="#e0d8cc" stroke-width="1" stroke-dasharray="4,3"/>
+
+          <!-- tags -->
+          <rect x="18" y="174" width="58" height="22" fill="none" stroke="#c4bdb2" stroke-width="1.5" rx="1"/>
+          <text x="47" y="189" font-family="Caveat" font-size="12" fill="#6b6258" text-anchor="middle">React</text>
+
+          <rect x="84" y="174" width="68" height="22" fill="none" stroke="#c4bdb2" stroke-width="1.5" rx="1"/>
+          <text x="118" y="189" font-family="Caveat" font-size="12" fill="#6b6258" text-anchor="middle">Node.js</text>
+
+          <rect x="160" y="174" width="72" height="22" fill="none" stroke="#c4bdb2" stroke-width="1.5" rx="1"/>
+          <text x="196" y="189" font-family="Caveat" font-size="12" fill="#6b6258" text-anchor="middle">MongoDB</text>
+
+          <!-- View link -->
+          <text x="18" y="230" font-family="Caveat" font-size="13" fill="#4a4238">View Mission →</text>
+          <line x1="18" y1="233" x2="118" y2="233" stroke="#4a4238" stroke-width="1" stroke-dasharray="3,2"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- ═══ ACHIEVEMENT CARD ═══ -->
+    <div class="card">
+      <p class="label">// Achievement Card — Tape + Stamp</p>
+      <svg width="260" height="200" viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg">
+        <g transform="rotate(0.5, 130, 100)">
+          <!-- shadow -->
+          <rect x="4" y="16" width="252" height="178" fill="#c4bdb2" opacity="0.4" rx="1"/>
+          <!-- card -->
+          <rect x="0" y="12" width="252" height="178" fill="#ede8dc" stroke="#4a4238" stroke-width="2" rx="1"/>
+          <!-- tape strip -->
+          <rect x="76" y="4" width="100" height="18" fill="rgba(200,190,160,0.5)" stroke="rgba(150,130,100,0.3)" stroke-width="1" rx="1"/>
+
+          <!-- icon -->
+          <text x="22" y="64" font-size="30">🏆</text>
+
+          <!-- title -->
+          <text x="62" y="55" font-family="Kalam" font-size="14" font-weight="700" fill="#1a1612">National Finalist —</text>
+          <text x="62" y="73" font-family="Kalam" font-size="14" font-weight="700" fill="#1a1612">India AI Impact Summit</text>
+
+          <!-- desc -->
+          <text x="22" y="104" font-family="Kalam" font-size="12" fill="#6b6258">HCL GUVI Buildathon. Competed</text>
+          <text x="22" y="120" font-family="Kalam" font-size="12" fill="#6b6258">at national level with ideas that</text>
+          <text x="22" y="136" font-family="Kalam" font-size="12" fill="#6b6258">actually mattered.</text>
+
+          <!-- stamp -->
+          <g transform="rotate(2, 180, 158)">
+            <rect x="148" y="146" width="90" height="24" fill="none" stroke="#4a4238" stroke-width="1.5" rx="1"/>
+            <text x="193" y="162" font-family="Caveat" font-size="12" fill="#4a4238" text-anchor="middle" letter-spacing="2">✓ UNLOCKED</text>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       4. BEYOND SECTION BENTO
+  ═══════════════════════════════════════ -->
+  <div class="card">
+    <p class="label">// Section 6 — Beyond the Screen (Bento Grid)</p>
+    <svg width="900" height="420" viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg">
+      <rect width="900" height="420" fill="#f4f0e8"/>
+      <g stroke="#c8b89a" stroke-width="0.5" opacity="0.25">
+        <line x1="0" y1="32" x2="900" y2="32"/><line x1="0" y1="64" x2="900" y2="64"/>
+        <line x1="0" y1="96" x2="900" y2="96"/><line x1="0" y1="128" x2="900" y2="128"/>
+        <line x1="0" y1="160" x2="900" y2="160"/><line x1="0" y1="192" x2="900" y2="192"/>
+        <line x1="0" y1="224" x2="900" y2="224"/><line x1="0" y1="256" x2="900" y2="256"/>
+        <line x1="0" y1="288" x2="900" y2="288"/><line x1="0" y1="320" x2="900" y2="320"/>
+        <line x1="0" y1="352" x2="900" y2="352"/><line x1="0" y1="384" x2="900" y2="384"/>
+      </g>
+      <line x1="72" y1="0" x2="72" y2="420" stroke="#cc6666" stroke-width="1.2" opacity="0.3"/>
+
+      <!-- Section label + heading -->
+      <text x="90" y="30" font-family="Caveat" font-size="12" fill="#9e9488" letter-spacing="2">// pg.06 — beyond the screen</text>
+      <g transform="rotate(-0.6, 90, 45)">
+        <text x="90" y="65" font-family="Permanent Marker" font-size="36" fill="#1a1612">The Human Bits</text>
+      </g>
+
+      <!-- CARD 1: Sports (small) -->
+      <g transform="rotate(-0.6, 180, 250) translate(90, 88)">
+        <rect x="3" y="3" width="192" height="140" fill="#c4bdb2" opacity="0.35" rx="1"/>
+        <rect x="0" y="0" width="192" height="140" fill="#ede8dc" stroke="#4a4238" stroke-width="2" rx="1"/>
+        <text x="14" y="32" font-size="22">🏸</text>
+        <text x="14" y="28" font-family="Caveat" font-size="10" fill="#9e9488" letter-spacing="2" dx="28">// ON THE GROUND</text>
+        <line x1="14" y1="38" x2="178" y2="38" stroke="#e0d8cc" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="14" y="60" font-family="Kalam" font-size="12" fill="#4a4238" font-weight="700">Badminton player.</text>
+        <text x="14" y="78" font-family="Kalam" font-size="12" fill="#6b6258">Right-arm fast bowler.</text>
+        <text x="14" y="96" font-family="Kalam" font-size="12" fill="#6b6258">Volleyball man.</text>
+        <text x="14" y="124" font-family="Kalam" font-size="11" fill="#9e9488" font-style="italic">The ground clears the bugs.</text>
+      </g>
+
+      <!-- CARD 2: Cinema (wide) -->
+      <g transform="rotate(0.3, 490, 250) translate(300, 88)">
+        <rect x="3" y="3" width="422" height="140" fill="#c4bdb2" opacity="0.35" rx="1"/>
+        <rect x="0" y="0" width="422" height="140" fill="#ede8dc" stroke="#4a4238" stroke-width="2" rx="1"/>
+        <text x="14" y="32" font-size="22">🎬</text>
+        <text x="14" y="28" font-family="Caveat" font-size="10" fill="#9e9488" letter-spacing="2" dx="28">// CINEMA — FIRST LOVE</text>
+        <line x1="14" y1="38" x2="408" y2="38" stroke="#e0d8cc" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="14" y="58" font-family="Kalam" font-size="12" fill="#4a4238">All-time favourite: <tspan font-weight="700">The Sixth Sense ★</tspan></text>
+        <!-- movie pills -->
+        <rect x="14" y="68" width="118" height="22" fill="#f4f0e8" stroke="#4a4238" stroke-width="1.5" rx="1" transform="rotate(-1,73,79)"/>
+        <text x="73" y="83" font-family="Caveat" font-size="12" fill="#1a1612" text-anchor="middle" font-weight="700">The Sixth Sense ★</text>
+
+        <rect x="142" y="68" width="80" height="22" fill="#f4f0e8" stroke="#c4bdb2" stroke-width="1.5" rx="1"/>
+        <text x="182" y="83" font-family="Caveat" font-size="12" fill="#6b6258" text-anchor="middle">Interstellar</text>
+
+        <rect x="232" y="68" width="68" height="22" fill="#f4f0e8" stroke="#c4bdb2" stroke-width="1.5" rx="1"/>
+        <text x="266" y="83" font-family="Caveat" font-size="12" fill="#6b6258" text-anchor="middle">Inception</text>
+
+        <rect x="310" y="68" width="96" height="22" fill="#f4f0e8" stroke="#c4bdb2" stroke-width="1.5" rx="1"/>
+        <text x="358" y="83" font-family="Caveat" font-size="12" fill="#6b6258" text-anchor="middle">Dark Knight</text>
+
+        <text x="14" y="120" font-family="Kalam" font-size="11" fill="#9e9488" font-style="italic">Movies before code. Always.</text>
+      </g>
+
+      <!-- CARD 3: Music (small) -->
+      <g transform="rotate(-0.3, 180, 380) translate(90, 246)">
+        <rect x="3" y="3" width="192" height="120" fill="#c4bdb2" opacity="0.35" rx="1"/>
+        <rect x="0" y="0" width="192" height="120" fill="#ede8dc" stroke="#4a4238" stroke-width="2" rx="1"/>
+        <text x="14" y="30" font-size="20">🎵</text>
+        <text x="14" y="26" font-family="Caveat" font-size="10" fill="#9e9488" letter-spacing="2" dx="26">// CODING SOUNDTRACK</text>
+        <line x1="14" y1="36" x2="178" y2="36" stroke="#e0d8cc" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="14" y="58" font-family="Kalam" font-size="12" fill="#4a4238">Old Hindi retro hits.</text>
+        <text x="14" y="76" font-family="Kalam" font-size="12" fill="#6b6258">Coding without them?</text>
+        <text x="14" y="94" font-family="Kalam" font-size="12" fill="#1a1612" font-weight="700">Unfixed bugs guaranteed.</text>
+      </g>
+
+      <!-- Quote card (wide bottom) -->
+      <g transform="rotate(0.3, 490, 380) translate(300, 246)">
+        <rect x="4" y="4" width="422" height="120" fill="#c4bdb2" opacity="0.3" rx="1"/>
+        <rect x="0" y="0" width="422" height="120" fill="#e8e2d4" stroke="#4a4238" stroke-width="2" rx="1"/>
+        <!-- decorative quote mark -->
+        <text x="12" y="70" font-family="Permanent Marker" font-size="72" fill="#c4bdb2" opacity="0.5">"</text>
+        <!-- quote text -->
+        <text x="211" y="55" font-family="Permanent Marker" font-size="24" fill="#1a1612" text-anchor="middle">Decisions Decide</text>
+        <text x="211" y="82" font-family="Permanent Marker" font-size="24" fill="#1a1612" text-anchor="middle">Destiny</text>
+        <text x="211" y="106" font-family="Caveat" font-size="13" fill="#9e9488" text-anchor="middle">— Yashraj Rastogi</text>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       5. CONTACT / FOOTER
+  ═══════════════════════════════════════ -->
+  <div class="card">
+    <p class="label">// Outro — Contact + Footer</p>
+    <svg width="900" height="320" viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg">
+      <rect width="900" height="280" fill="#e8e2d4"/>
+      <g stroke="#c0b090" stroke-width="0.5" opacity="0.25">
+        <line x1="0" y1="32" x2="900" y2="32"/><line x1="0" y1="64" x2="900" y2="64"/>
+        <line x1="0" y1="96" x2="900" y2="96"/><line x1="0" y1="128" x2="900" y2="128"/>
+        <line x1="0" y1="160" x2="900" y2="160"/><line x1="0" y1="192" x2="900" y2="192"/>
+        <line x1="0" y1="224" x2="900" y2="224"/><line x1="0" y1="256" x2="900" y2="256"/>
+      </g>
+      <line x1="72" y1="0" x2="72" y2="280" stroke="#cc6666" stroke-width="1.2" opacity="0.3"/>
+
+      <text x="450" y="38" font-family="Caveat" font-size="12" fill="#9e9488" letter-spacing="2" text-anchor="middle">// outro — the signal</text>
+
+      <g transform="rotate(-0.5, 450, 90)">
+        <text x="450" y="90" font-family="Permanent Marker" font-size="44" fill="#1a1612" text-anchor="middle">Got a Mission? Let's Talk.</text>
+      </g>
+
+      <text x="450" y="126" font-family="Caveat" font-size="15" fill="#6b6258" text-anchor="middle">Open to collaborations, internships, cool projects, and interesting conversations.</text>
+
+      <!-- Contact buttons -->
+      <!-- GitHub -->
+      <g transform="translate(170, 148)">
+        <rect x="3" y="3" width="106" height="38" fill="#c4bdb2" opacity="0.4" rx="1"/>
+        <rect x="0" y="0" width="106" height="38" fill="#f4f0e8" stroke="#4a4238" stroke-width="2" rx="1"/>
+        <text x="53" y="24" font-family="Caveat" font-size="15" fill="#1a1612" text-anchor="middle" font-weight="700">GitHub</text>
+      </g>
+      <!-- LinkedIn -->
+      <g transform="translate(290, 148)">
+        <rect x="3" y="3" width="106" height="38" fill="#c4bdb2" opacity="0.4" rx="1"/>
+        <rect x="0" y="0" width="106" height="38" fill="#f4f0e8" stroke="#4a4238" stroke-width="2" rx="1"/>
+        <text x="53" y="24" font-family="Caveat" font-size="15" fill="#1a1612" text-anchor="middle" font-weight="700">LinkedIn</text>
+      </g>
+      <!-- Instagram -->
+      <g transform="translate(410, 148)">
+        <rect x="3" y="3" width="116" height="38" fill="#c4bdb2" opacity="0.4" rx="1"/>
+        <rect x="0" y="0" width="116" height="38" fill="#f4f0e8" stroke="#4a4238" stroke-width="2" rx="1"/>
+        <text x="58" y="24" font-family="Caveat" font-size="15" fill="#1a1612" text-anchor="middle" font-weight="700">Instagram</text>
+      </g>
+      <!-- Email -->
+      <g transform="translate(540, 148)">
+        <rect x="3" y="3" width="96" height="38" fill="#c4bdb2" opacity="0.4" rx="1"/>
+        <rect x="0" y="0" width="96" height="38" fill="#f4f0e8" stroke="#4a4238" stroke-width="2" rx="1"/>
+        <text x="48" y="24" font-family="Caveat" font-size="15" fill="#1a1612" text-anchor="middle" font-weight="700">Email</text>
+      </g>
+
+      <!-- Footer -->
+      <rect y="280" width="900" height="40" fill="#ede8dc"/>
+      <line x1="0" y1="280" x2="900" y2="280" stroke="#4a4238" stroke-width="1" stroke-dasharray="6,4" opacity="0.4"/>
+      <text x="90" y="305" font-family="Caveat" font-size="13" fill="#9e9488">© 2025 Yashraj Rastogi</text>
+      <text x="450" y="305" font-family="Permanent Marker" font-size="14" fill="#4a4238" text-anchor="middle">Decisions Decide Destiny</text>
+      <text x="810" y="305" font-family="Caveat" font-size="13" fill="#9e9488" text-anchor="end">Built with obsession ✏️</text>
+    </svg>
+  </div>
+
+</body>
+</html>
